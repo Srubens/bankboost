@@ -413,10 +413,12 @@ footer .copy .text p {
   left: 0;
   top: 0;
   z-index: 1;
+  animation: floating 5s infinite ease-in-out;
 }
 .s-hero .right .cards .item.card-two {
   bottom: 0;
   right: 0;
+  animation: floating2 5s infinite ease-in-out;
 }
 @media (max-width: 1200px) {
   .s-hero {
@@ -1142,5 +1144,28 @@ footer .copy .text p {
   .s-account .right .mockup.tweo {
     top: -3rem;
     left: -4rem;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes floating2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }/*# sourceMappingURL=main.css.map */
