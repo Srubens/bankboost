@@ -110,9 +110,12 @@ header .right .btn {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: normal;
+  transition: 0.3s ease;
 }
 header .right .btn:hover {
   opacity: 0.7;
+  background-color: var(--white);
+  color: var(--purple-10);
 }
 header .btn-mobile {
   display: none;
@@ -180,6 +183,12 @@ footer .area-social .social-media ul span {
   color: var(--white);
   font-size: 1.4rem;
 }
+footer .area-social .social-media ul li a {
+  transition: opacity 0.3s ease;
+}
+footer .area-social .social-media ul li a:hover {
+  opacity: 0.6;
+}
 footer .main-area {
   display: flex;
   align-items: flex-start;
@@ -220,10 +229,14 @@ footer .main-area .right {
 footer .main-area .right a {
   display: flex;
   border-radius: 0.4rem;
-  background: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.04);
   padding: 2rem 1.5rem 2rem 1.3rem;
   gap: 1.6rem;
   align-items: center;
+  transition: background-color 0.3s ease;
+}
+footer .main-area .right a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 footer .main-area .right a:not(:last-child) {
   margin-bottom: 2.4rem;
@@ -352,6 +365,10 @@ footer .copy .text p {
   font-weight: 600;
   line-height: normal;
   margin-bottom: 6.4rem;
+  transition: 0.3s ease;
+}
+.s-hero .left .btn:hover {
+  filter: brightness(0.8);
 }
 .s-hero .left ul {
   display: flex;
@@ -572,6 +589,12 @@ footer .copy .text p {
   flex-direction: column;
   gap: 1.6rem;
 }
+.s-boost .left .description ul li a {
+  transition: 0.3s ease;
+}
+.s-boost .left .description ul li a:hover {
+  opacity: 0.6;
+}
 .s-boost .right {
   flex: 1;
   max-width: 80rem;
@@ -622,6 +645,10 @@ footer .copy .text p {
   letter-spacing: -0.5px;
   font-weight: 500;
   font-size: 1.6rem;
+  transition: opacity 0.3s ease;
+}
+.s-boost .right .btn:hover {
+  opacity: 0.8;
 }
 .s-boost .right .btn:after {
   content: "";
@@ -682,6 +709,10 @@ footer .copy .text p {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--brown);
+  transition: 0.3s ease;
+}
+.s-boost .right .box .text ul li button:hover {
+  filter: brightness(0.8);
 }
 .s-boost .right .box .card {
   position: relative;
@@ -1015,6 +1046,10 @@ footer .copy .text p {
   font-size: 1.6rem;
   font-weight: 600;
   margin-top: 4.8rem;
+  transition: filter 0.3s ease;
+}
+.s-account .left .btn:hover {
+  filter: brightness(0.8);
 }
 .s-account .right {
   position: relative;

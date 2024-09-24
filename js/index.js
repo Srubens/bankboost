@@ -20,3 +20,7 @@ let swiper = new Swiper(".slide-deposition", {
       },
     }
   });
+
+AOS.init({
+    duration:1000,
+});
