@@ -30,14 +30,40 @@
 <meta property="twitter:image" content="https://srubens.github.io/bankboost/share-og.png" />
 
 <!-- Meta Tags Generated with https://metatags.io -->
+ <link rel="icon" href="./favicon.png" type="image/png"/>
 </head>
 <body>
-    <header>
+    <header id="js-header" >
         <div class="container">
-            <a href="#"><img src="./img/logo.svg" alt="logo"></a>
+            <a href="#" class="logo" ></a>
+            <nav>
+                <div class="dropdown">
+                    <div class="item">
+                        <strong>Cartão de crédito</strong>
+                        <p>Cartão de crédito sem anuidade.</p>
+                    </div>
+                    <div class="item">
+                        <strong>Cartão pré-pago</strong>
+                        <p>Cartão de débito internacional Neon.</p>
+                    </div>
+                    <div class="item">
+                        <strong>Neon Mais</strong>
+                        <p>4 saques grátis para quem comprar com Neon.</p>
+                    </div>
+                    <div class="item">
+                        <strong>Investimentos</strong>
+                        <p>A revolução da poupança.</p>
+                    </div>
+                    <div class="item">
+                        <strong>Empréstimo pessoal</strong>
+                        <p>Faça uma simulação de empréstimo pessoal.</p>
+                    </div>
+                </div>
+            </nav>
+
             <div class="right">
                 <nav>
-                    <a href="#">Produtos Boost</a>
+                    <a href="#" class="js-btn-dropdown" >Produtos Boost</a>
                     <a href="#">Conta digital PJ</a>
                     <a href="#">Quem somos</a>
                     <a href="#">Blog</a>
@@ -45,11 +71,29 @@
                 </nav>
                 <a href="#" class="btn">Abra a sua conta digital</a>
             </div>
-            <button>
-                <img src="./img/menu.svg" class="btn-mobile" alt="">
+            <button type="button" >
+                <img src="./img/menu.svg" class="btn-mobile js-btn-mobile" alt="">
             </button>
         </div>
     </header>
+
+    <div class="menu-mobile">
+        <div class="overlay js-overlay"></div>
+        <aside>
+            <a href="#" class="logo" ></a>
+
+            <div class="right-mobile">
+                <nav>
+                    <a href="#" class="js-btn-dropdown" >Produtos Boost</a>
+                    <a href="#">Conta digital PJ</a>
+                    <a href="#">Quem somos</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Ajuda</a>
+                </nav>
+                <a href="#" class="btn">Abra a sua conta digital</a>
+            </div>
+        </aside>
+    </div>
 
      <section class="s-hero">
         <div class="container">

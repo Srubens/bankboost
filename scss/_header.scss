@@ -1,5 +1,5 @@
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,8 +9,98 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+        position: relative;
     }
+    &.fixed-menu{
+        background: var(--white);
+        z-index: 1;
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+        .logo{
+            background: url('../img/logo-1.svg') no-repeat center center;
+        }
+        .right{
+            nav{
+                a{
+                    color:var(--gray-800);
+                }
+            }
+            .btn{
+                background: var(--yellow);
+                &:hover{
+                    border:1px solid var(--yellow);
+                    color: var(--brown);
+                }
+            }
+        }
+
+    }
+    .logo{
+        display: inline-block;
+        background: url('../img/logo.svg') no-repeat center center;
+        height: 30px;
+        width: 132px;
+        background-size: 100%;
+        transition: background-image;
+    }
+
+    nav{
+        position: relative;
+        .dropdown{
+            position: absolute;
+            top: 4.9rem;
+            left: -13rem;
+            width: 37.3rem;
+            background: var(--white);
+            border-radius: 6px;
+            padding: 4rem;
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            transition:all .3s;
+            &.active{
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0px);
+            }
+            &:after{
+                content:'';
+                width: 29.3rem;
+                height: .5rem;
+                background: #ffc800;
+                border-radius: 1.2rem 1.2rem 0 0;
+                position:absolute;
+                bottom: 0;
+            }
+            .item{
+                cursor: pointer;
+                &:hover{
+                    strong{
+                        color:#0073ce;
+                    }
+                }
+                &:not(:last-child){
+                    margin-bottom: 2.8rem;
+                }
+                strong{
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    line-height: 19px;
+                    color:#5f5c6b;
+                    display: block;
+                    margin-bottom: 0.4rem;
+                }
+                p{
+                    font-size: 1.4rem;
+                    line-height: 150%;
+                    color:#8c8a97;
+                }
+            }
+        }
+    }
+
     .right{
         flex:1;
         max-width: 89.6rem;
@@ -74,6 +164,73 @@ header{
         }
         .btn-mobile{
             display:block;
+        }
+    }
+}
+
+.menu-mobile{
+    display: none;
+    @media(max-width:560px){
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s;
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 0;
+        }
+        aside{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 100%;
+            background: var(--white);
+            padding: 3rem;
+            transform: translateX(-100%);
+            transition: transform .3s;
+            .logo{
+                display: inline-block;
+                height: 3rem;
+                width: 15rem;
+                background-size: 100%;
+                margin-bottom: 4rem;
+                background: url('../img/logo-1.svg') no-repeat center center;
+            }
+            .right-mobile{
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        padding: 1.5rem 0;
+                        color: var(--gray-700);
+                        font-size: 1.8rem;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-opened{
+    overflow: hidden;
+    .menu-mobile{
+        opacity: 1;
+        pointer-events: all;
+        aside{
+            transform: translateX(0%);
         }
     }
 }
